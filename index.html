@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akres — Integração de Sistemas Corporativos</title>
+  <meta name="description" content="Plataforma de integração de sistemas corporativos. Conectamos ERP, CRM, controle de acesso, BMS e automação predial em dashboards e relatórios em tempo real." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-mark">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="akres-grad-1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00d4ff"/>
+              <stop offset="100%" stop-color="#1ae8c8"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 4.5 L5 27.5 M16 4.5 L27 27.5 M9.5 19 L22.5 19" stroke="url(#akres-grad-1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="16" cy="4.5" r="3" fill="url(#akres-grad-1)"/>
+          <circle cx="5" cy="27.5" r="2.5" fill="#1ae8c8"/>
+          <circle cx="27" cy="27.5" r="2.5" fill="#1ae8c8"/>
+          <circle cx="9.5" cy="19" r="1.6" fill="#00d4ff"/>
+          <circle cx="22.5" cy="19" r="1.6" fill="#00d4ff"/>
+        </svg>
+      </span>
+      Akres
+    </a>
+    <ul class="nav-links">
+      <li><a href="#solucoes">Soluções</a></li>
+      <li><a href="#showcase">Plataforma</a></li>
+      <li><a href="#systems">Integrações</a></li>
+      <li><a href="#flow">Como funciona</a></li>
+      <li><a href="#process">Processo</a></li>
+    </ul>
+    <a href="#contato" class="nav-cta">Solicitar diagnóstico</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#solucoes">Soluções</a>
+  <a href="#showcase">Plataforma</a>
+  <a href="#systems">Integrações</a>
+  <a href="#flow">Como funciona</a>
+  <a href="#process">Processo</a>
+  <a href="#contato" style="color: var(--cyan); font-weight: 700;">Solicitar diagnóstico →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-pill">
+        <span class="dot"></span>
+        Integração corporativa em tempo real
+      </div>
+      <h1>Sistemas conectados. Dados unificados. <span class="gradient">Operação inteligente.</span></h1>
+      <p class="sub">Desenvolvemos integrações entre sistemas corporativos — controle de acesso, CRM, RH, automação predial, ERP, manutenção e BI — e criamos relatórios customizados que transformam dados em decisão.</p>
+      <div class="hero-btns">
+        <a href="#contato" class="btn btn-primary">
+          Solicitar diagnóstico
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#flow" class="btn btn-ghost">Ver como funciona</a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <div class="hero-meta-val">+<span>40</span></div>
+          <div class="hero-meta-label">Integrações entregues</div>
+        </div>
+        <div>
+          <div class="hero-meta-val"><span>99.9</span>%</div>
+          <div class="hero-meta-label">SLA de pipelines</div>
+        </div>
+        <div>
+          <div class="hero-meta-val">&lt;<span>200</span>ms</div>
+          <div class="hero-meta-label">Latência média</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTEGRATION DIAGRAM -->
+    <div class="hero-visual">
+      <div class="integration-diagram">
+        <div class="id-header">
+          <span class="id-title">akres / integration-hub</span>
+          <span class="id-status">8 sistemas sincronizados</span>
+        </div>
+        <div class="id-canvas">
+          <svg class="id-svg" viewBox="0 0 600 620" preserveAspectRatio="none">
+            <!-- Orbit ring around core -->
+            <circle class="ring-orbit" cx="300" cy="310" r="170"/>
+            <circle class="ring-orbit" cx="300" cy="310" r="240" style="opacity: 0.6"/>
+
+            <!-- Connection paths from each node (center 300,310) -->
+            <path class="line bold" d="M 300 50 L 300 310" id="p1"/>
+            <path class="line" d="M 520 110 L 300 310" id="p2"/>
+            <path class="line bold" d="M 555 310 L 300 310" id="p3"/>
+            <path class="line" d="M 520 510 L 300 310" id="p4"/>
+            <path class="line bold" d="M 300 570 L 300 310" id="p5"/>
+            <path class="line" d="M 80 510 L 300 310" id="p6"/>
+            <path class="line bold" d="M 45 310 L 300 310" id="p7"/>
+            <path class="line" d="M 80 110 L 300 310" id="p8"/>
+
+            <!-- Reverse paths (for outbound packets back to systems) -->
+            <path d="M 300 310 L 300 50"  id="rp1" style="display:none"/>
+            <path d="M 300 310 L 520 110" id="rp2" style="display:none"/>
+            <path d="M 300 310 L 555 310" id="rp3" style="display:none"/>
+
+            <!-- Inbound packets (system → core) -->
+            <circle class="packet" r="3.5" style="color: #f472b6; fill: #f472b6;">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#p1"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="2.6s" repeatCount="indefinite" begin="0s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #1ae8c8; fill: #1ae8c8;">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="0.3s"><mpath href="#p2"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" begin="0.3s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #a78bfa; fill: #a78bfa;">
+              <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.6s"><mpath href="#p3"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="0.6s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #34d399; fill: #34d399;">
+              <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.9s"><mpath href="#p4"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" repeatCount="indefinite" begin="0.9s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #fbbf24; fill: #fbbf24;">
+              <animateMotion dur="2.7s" repeatCount="indefinite" begin="1.2s"><mpath href="#p5"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="2.7s" repeatCount="indefinite" begin="1.2s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #00d4ff; fill: #00d4ff;">
+              <animateMotion dur="2.9s" repeatCount="indefinite" begin="1.5s"><mpath href="#p6"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="2.9s" repeatCount="indefinite" begin="1.5s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #818cf8; fill: #818cf8;">
+              <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.8s"><mpath href="#p7"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" begin="1.8s"/>
+            </circle>
+            <circle class="packet" r="3.5" style="color: #f87171; fill: #f87171;">
+              <animateMotion dur="3.1s" repeatCount="indefinite" begin="2.1s"><mpath href="#p8"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" dur="3.1s" repeatCount="indefinite" begin="2.1s"/>
+            </circle>
+
+            <!-- Outbound (core → system) packets — bidirectional flow -->
+            <circle class="packet" r="2.5" style="color: #00d4ff; fill: #00d4ff; opacity: 0.7">
+              <animateMotion dur="3.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#rp1"/></animateMotion>
+              <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
+            </circle>
+            <circle class="packet" r="2.5" style="color: #1ae8c8; fill: #1ae8c8; opacity: 0.7">
+              <animateMotion dur="3.6s" repeatCount="indefinite" begin="1.6s"><mpath href="#rp2"/></animateMotion>
+              <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3.6s" repeatCount="indefinite" begin="1.6s"/>
+            </circle>
+            <circle class="packet" r="2.5" style="color: #a78bfa; fill: #a78bfa; opacity: 0.7">
+              <animateMotion dur="3.2s" repeatCount="indefinite" begin="2.4s"><mpath href="#rp3"/></animateMotion>
+              <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3.2s" repeatCount="indefinite" begin="2.4s"/>
+            </circle>
+          </svg>
+
+          <!-- Protocol labels along connection lines -->
+          <span class="id-protocol p-pink"   style="top: 24%;  left: 50%; transform: translateX(-50%);">REST · POST</span>
+          <span class="id-protocol p-green"  style="top: 28%;  right: 21%;">SOAP / XML</span>
+          <span class="id-protocol p-violet" style="top: 47%;  right: 16%;">GraphQL</span>
+          <span class="id-protocol p-green"  style="bottom: 28%; right: 21%;">OPC-UA</span>
+          <span class="id-protocol p-amber"  style="bottom: 24%; left: 50%; transform: translateX(-50%);">Webhook</span>
+          <span class="id-protocol p-cyan"   style="bottom: 28%; left: 21%;">MQTT 5.0</span>
+          <span class="id-protocol p-violet" style="top: 47%;  left: 16%;">SQL / ODBC</span>
+          <span class="id-protocol p-pink"   style="top: 28%;  left: 21%;">BACnet IP</span>
+
+          <!-- 8 nodes around core -->
+          <div class="id-node n1">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #f472b6, #c026d3);">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">Controle Acesso</span><span class="id-node-type">RFID · BIO</span></div>
+          </div>
+
+          <div class="id-node n2">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #1ae8c8, #14b8a6);">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">Sistema RH</span><span class="id-node-type">SAP HCM</span></div>
+          </div>
+
+          <div class="id-node n3">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #a78bfa, #7c3aed);">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">CRM</span><span class="id-node-type">Salesforce</span></div>
+          </div>
+
+          <div class="id-node n4">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #34d399, #0d9488);">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">BMS / SCADA</span><span class="id-node-type">BACnet</span></div>
+          </div>
+
+          <div class="id-node n5">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.07 7.07l4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m7.07-7.07l4.24-4.24"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">Manutenção</span><span class="id-node-type">GMAO</span></div>
+          </div>
+
+          <div class="id-node n6">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #00d4ff, #0891b2);">
+              <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">BI / Dashboards</span><span class="id-node-type">Power BI</span></div>
+          </div>
+
+          <div class="id-node n7">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #818cf8, #4f46e5);">
+              <svg viewBox="0 0 24 24"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v5m18 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5m18 0H3"/><path d="M7 8h.01M7 16h.01"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">ERP Corporativo</span><span class="id-node-type">SAP S/4</span></div>
+          </div>
+
+          <div class="id-node n8">
+            <div class="id-node-icon" style="background: linear-gradient(135deg, #f87171, #b91c1c);">
+              <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7zM1 5h15v14H1z"/></svg>
+            </div>
+            <div class="id-node-meta"><span class="id-node-name">CFTV / Câmeras</span><span class="id-node-type">RTSP · ONVIF</span></div>
+          </div>
+
+          <div class="id-center">
+            <div class="id-center-core">
+              <span class="id-center-core-name">AKRES</span>
+              <span class="id-center-core-tag">CORE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom metrics strip -->
+        <div class="id-metrics">
+          <div class="id-metric">
+            <span class="id-metric-val"><span>1.247</span>/s</span>
+            <span class="id-metric-label">Eventos por seg.</span>
+          </div>
+          <div class="id-protocols-row">
+            <span class="id-proto-chip">REST</span>
+            <span class="id-proto-chip">SOAP</span>
+            <span class="id-proto-chip">MQTT</span>
+            <span class="id-proto-chip">OPC-UA</span>
+            <span class="id-proto-chip">SQL</span>
+            <span class="id-proto-chip">BACnet</span>
+          </div>
+          <div class="id-metric" style="text-align: right; align-items: flex-end;">
+            <span class="id-metric-val"><span>99.97</span>%</span>
+            <span class="id-metric-label">Uptime 30d</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="logos-inner">
+    <div class="logos-label">Sistemas e protocolos suportados</div>
+    <div class="logos-grid">
+      <div class="logo-pill"><span class="dot" style="background:#f472b6"></span>SAP</div>
+      <div class="logo-pill"><span class="dot" style="background:#1ae8c8"></span>Salesforce</div>
+      <div class="logo-pill"><span class="dot" style="background:#a78bfa"></span>TOTVS</div>
+      <div class="logo-pill"><span class="dot" style="background:#fbbf24"></span>Oracle</div>
+      <div class="logo-pill"><span class="dot" style="background:#34d399"></span>HID</div>
+      <div class="logo-pill"><span class="dot" style="background:#00d4ff"></span>Honeywell</div>
+      <div class="logo-pill"><span class="dot" style="background:#f472b6"></span>Power BI</div>
+      <div class="logo-pill"><span class="dot" style="background:#a78bfa"></span>Tableau</div>
+      <div class="logo-pill"><span class="dot" style="background:#1ae8c8"></span>Siemens</div>
+      <div class="logo-pill"><span class="dot" style="background:#fbbf24"></span>OPC-UA</div>
+      <div class="logo-pill"><span class="dot" style="background:#34d399"></span>REST API</div>
+      <div class="logo-pill"><span class="dot" style="background:#00d4ff"></span>BACnet</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS / O QUE FAZEMOS -->
+<section id="solucoes">
+  <div class="section-inner">
+    <div class="section-eyebrow">O que fazemos</div>
+    <h2 class="section-title">Engenharia de integração <span class="gradient">de ponta a ponta</span>.</h2>
+    <p class="section-sub">Da coleta dos dados nos sistemas técnicos até o relatório que chega ao gestor — cada camada é projetada, implementada e monitorada com padrão de engenharia.</p>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6m-3-3v6M8.5 8.5l7 7M9 18h6m-3-3v6"/></svg>
+        </div>
+        <h3>Integração entre sistemas corporativos</h3>
+        <p>Conectamos ERPs, CRMs, sistemas de RH, manutenção e plataformas técnicas via APIs, bancos de dados, mensageria ou protocolos industriais.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Controle de acesso e segurança</h3>
+        <p>Integramos sistemas de controle de acesso, CFTV e alarmes às plataformas de RH, gestão de visitantes e relatórios executivos.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Automação predial e técnica</h3>
+        <p>Conectamos BMS, HVAC, energia, UPS e ativos críticos a sistemas de monitoramento, manutenção e dashboards centralizados.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        </div>
+        <h3>CRM, RH e ERP unificados</h3>
+        <p>Dados operacionais conversando diretamente com os sistemas de negócio — sem planilhas, sem retrabalho, sem dupla digitação.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+        </div>
+        <h3>Relatórios e dashboards sob medida</h3>
+        <p>Painéis desenhados para decisão, conectados às fontes em tempo real. Power BI, Tableau ou aplicações web próprias.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h3>Automatização de processos</h3>
+        <p>Workflows automáticos entre sistemas, alertas inteligentes e ações condicionais — eliminando trabalho manual repetitivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD SHOWCASE -->
+<section id="showcase">
+  <div class="section-inner">
+    <div class="section-eyebrow">Plataforma de relatórios</div>
+    <h2 class="section-title">Uma única tela. <span class="gradient">Toda a operação.</span></h2>
+    <p class="section-sub">Dashboards customizados que consolidam dados de acesso, segurança, manutenção, RH e operação em uma visão unificada — atualizada em tempo real.</p>
+
+    <div class="showcase-mockup fade-up">
+      <div class="dash-titlebar">
+        <div class="dash-dot r"></div>
+        <div class="dash-dot y"></div>
+        <div class="dash-dot g"></div>
+        <div class="dash-url">akres.io / operacoes / dashboard.live</div>
+      </div>
+      <div class="dash-body">
+        <div class="dash-sidebar">
+          <div class="dash-sidebar-logo">
+            <div class="dash-sidebar-logo-mark"></div>
+            <span>Akres</span>
+          </div>
+          <div class="dash-nav-section">Operação</div>
+          <div class="dash-nav-item active"><span class="sq"></span>Visão Geral</div>
+          <div class="dash-nav-item"><span class="sq"></span>Acessos</div>
+          <div class="dash-nav-item"><span class="sq"></span>Segurança</div>
+          <div class="dash-nav-item"><span class="sq"></span>Manutenção</div>
+          <div class="dash-nav-section">Relatórios</div>
+          <div class="dash-nav-item"><span class="sq"></span>SLA Mensal</div>
+          <div class="dash-nav-item"><span class="sq"></span>Energia</div>
+          <div class="dash-nav-item"><span class="sq"></span>Eventos</div>
+          <div class="dash-nav-section">Sistema</div>
+          <div class="dash-nav-item"><span class="sq"></span>Integrações</div>
+          <div class="dash-nav-item"><span class="sq"></span>Configurações</div>
+        </div>
+
+        <div class="dash-main">
+          <div class="dash-title-row">
+            <h4>Visão Geral — Operação em Tempo Real</h4>
+            <span class="dash-time">Atualizado há 12s · LIVE</span>
+          </div>
+
+          <div class="dash-kpis">
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Acessos hoje</div>
+              <div class="dash-kpi-val">2.847</div>
+              <div class="dash-kpi-trend">↑ 12.4%</div>
+            </div>
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">SLA mensal</div>
+              <div class="dash-kpi-val">99.7%</div>
+              <div class="dash-kpi-trend">↑ 0.3%</div>
+            </div>
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Chamados</div>
+              <div class="dash-kpi-val">23</div>
+              <div class="dash-kpi-trend down">↓ 18%</div>
+            </div>
+            <div class="dash-kpi">
+              <div class="dash-kpi-label">Ocupação</div>
+              <div class="dash-kpi-val">78%</div>
+              <div class="dash-kpi-trend">↑ 4.1%</div>
+            </div>
+          </div>
+
+          <div class="dash-chart-grid">
+            <div class="dash-chart">
+              <div class="dash-chart-title">
+                Fluxo de eventos integrados — últimas 24h
+                <span class="tag">SYNC ●</span>
+              </div>
+              <svg class="dash-chart-svg" viewBox="0 0 460 130" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="area-cyan" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <line class="grid-line" x1="0" y1="30" x2="460" y2="30"/>
+                <line class="grid-line" x1="0" y1="65" x2="460" y2="65"/>
+                <line class="grid-line" x1="0" y1="100" x2="460" y2="100"/>
+                <path class="area-cyan" d="M0,95 L25,85 L50,90 L75,72 L100,78 L125,55 L150,68 L175,42 L200,52 L225,32 L250,45 L275,28 L300,38 L325,22 L350,35 L375,28 L400,40 L425,32 L460,28 L460,130 L0,130 Z"/>
+                <path class="line-cyan" d="M0,95 L25,85 L50,90 L75,72 L100,78 L125,55 L150,68 L175,42 L200,52 L225,32 L250,45 L275,28 L300,38 L325,22 L350,35 L375,28 L400,40 L425,32 L460,28"/>
+                <path class="line-violet" d="M0,108 L25,100 L50,95 L75,88 L100,92 L125,78 L150,85 L175,72 L200,78 L225,68 L250,72 L275,60 L300,65 L325,55 L350,60 L375,52 L400,58 L425,50 L460,46"/>
+                <circle cx="460" cy="28" r="3.5" fill="#00d4ff" filter="drop-shadow(0 0 4px #00d4ff)"/>
+              </svg>
+            </div>
+
+            <div class="dash-chart">
+              <div class="dash-chart-title">
+                SLA por sistema
+                <span class="tag">7 DIAS</span>
+              </div>
+              <div class="dash-donut">
+                <svg width="100" height="100" viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="14" fill="none" stroke="oklch(100% 0 0 / 0.08)" stroke-width="4"/>
+                  <circle cx="18" cy="18" r="14" fill="none" stroke="#00d4ff" stroke-width="4" stroke-dasharray="55 88" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 18 18)" style="filter: drop-shadow(0 0 3px #00d4ff)"/>
+                  <circle cx="18" cy="18" r="14" fill="none" stroke="#a78bfa" stroke-width="4" stroke-dasharray="22 88" stroke-dashoffset="-55" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                  <circle cx="18" cy="18" r="14" fill="none" stroke="#fbbf24" stroke-width="4" stroke-dasharray="11 88" stroke-dashoffset="-77" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                </svg>
+                <div class="dash-donut-legend">
+                  <div><span class="sq" style="background:#00d4ff"></span>Acesso <b style="color:var(--text); margin-left: auto;">62%</b></div>
+                  <div><span class="sq" style="background:#a78bfa"></span>BMS <b style="color:var(--text); margin-left: auto;">25%</b></div>
+                  <div><span class="sq" style="background:#fbbf24"></span>RH <b style="color:var(--text); margin-left: auto;">13%</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS / INTEGRATIONS -->
+<section id="systems">
+  <div class="section-inner">
+    <div class="section-eyebrow">Integrações</div>
+    <h2 class="section-title">Conectamos os sistemas que <span class="gradient">você já usa</span>.</h2>
+    <p class="section-sub">Nada de migração ou substituição. Atuamos como uma camada de orquestração que faz seus sistemas atuais conversarem entre si.</p>
+
+    <div class="systems-grid">
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #f472b6, #c026d3);">CA</div>
+          <div class="sys-card-head-text">
+            <h4>Controle de Acesso</h4>
+            <p>RFID · BIOMETRIA</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>LenelS2 OnGuard</li>
+          <li>Software House C•Cure</li>
+          <li>Hikvision</li>
+          <li>HID Mercury / Suprema</li>
+          <li>Honeywell</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #34d399, #0d9488);">BMS</div>
+          <div class="sys-card-head-text">
+            <h4>Automação Predial</h4>
+            <p>BMS · SCADA · HVAC</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>Schneider EcoStruxure</li>
+          <li>Siemens Desigo</li>
+          <li>Honeywell EBI</li>
+          <li>Johnson Metasys</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #a78bfa, #7c3aed);">CRM</div>
+          <div class="sys-card-head-text">
+            <h4>CRM e Atendimento</h4>
+            <p>SAAS · CLOUD</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>Salesforce</li>
+          <li>HubSpot / RD</li>
+          <li>Dynamics 365</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">ERP</div>
+          <div class="sys-card-head-text">
+            <h4>ERP Corporativo</h4>
+            <p>API · DB · SOAP</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>SAP S/4HANA</li>
+          <li>TOTVS Protheus</li>
+          <li>Oracle / Sankhya</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #1ae8c8, #14b8a6);">RH</div>
+          <div class="sys-card-head-text">
+            <h4>Sistemas de RH</h4>
+            <p>PONTO · FOLHA</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>SAP HCM / SuccessFactors</li>
+          <li>Senior / Sólides</li>
+          <li>Dimep / Henry</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #00d4ff, #0891b2);">BI</div>
+          <div class="sys-card-head-text">
+            <h4>BI &amp; Dashboards</h4>
+            <p>VISUALIZAÇÃO</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>Power BI</li>
+          <li>Tableau / Looker</li>
+          <li>Web custom</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #f87171, #b91c1c);">MTC</div>
+          <div class="sys-card-head-text">
+            <h4>Manutenção (GMAO)</h4>
+            <p>OS · SLA</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>Engeman</li>
+          <li>ServiceNow</li>
+          <li>SAP PM</li>
+        </ul>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-card-head">
+          <div class="sys-icon" style="background: linear-gradient(135deg, #818cf8, #4f46e5);">IoT</div>
+          <div class="sys-card-head-text">
+            <h4>Sensores e IoT</h4>
+            <p>MQTT · OPC-UA</p>
+          </div>
+        </div>
+        <ul class="sys-card-list">
+          <li>Sensores industriais</li>
+          <li>Telemetria / SCADA</li>
+          <li>Gateways OPC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA FLOW -->
+<section id="flow">
+  <div class="section-inner">
+    <div class="section-eyebrow">Como funciona</div>
+    <h2 class="section-title">A Akres no <span class="gradient">centro da sua arquitetura</span>.</h2>
+    <p class="section-sub">Dados de origem entram, são orquestrados pelo nosso motor e saem prontos para virar decisão — em relatórios, dashboards, alertas ou ações automáticas.</p>
+
+    <div class="flow-stage fade-up">
+      <div class="flow-row">
+        <div>
+          <div class="flow-col-header">Origem</div>
+          <div class="flow-stack">
+            <div class="flow-block"><span class="flow-block-dot" style="background: #f472b6"></span>Controle de Acesso</div>
+            <div class="flow-block"><span class="flow-block-dot" style="background: #34d399"></span>BMS / SCADA</div>
+            <div class="flow-block"><span class="flow-block-dot" style="background: #fbbf24"></span>CFTV / Câmeras</div>
+            <div class="flow-block"><span class="flow-block-dot" style="background: #818cf8"></span>Sensores IoT</div>
+          </div>
+        </div>
+
+        <div class="flow-arrow"></div>
+
+        <div>
+          <div class="flow-col-header center">Akres Core</div>
+          <div class="flow-core">
+            <div class="flow-core-mark">AKR</div>
+            <h4>Motor de Integração</h4>
+            <p>Coleta · Normaliza<br>Orquestra · Audita</p>
+            <div class="flow-tags">
+              <span class="flow-tag">REST</span>
+              <span class="flow-tag">ETL</span>
+              <span class="flow-tag">MQTT</span>
+              <span class="flow-tag">SQL</span>
+              <span class="flow-tag">OPC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-arrow"></div>
+
+        <div>
+          <div class="flow-col-header">Destino</div>
+          <div class="flow-stack">
+            <div class="flow-block"><span class="flow-block-dot" style="background: #00d4ff"></span>BI &amp; Dashboards</div>
+            <div class="flow-block"><span class="flow-block-dot" style="background: #a78bfa"></span>CRM / ERP</div>
+            <div class="flow-block"><span class="flow-block-dot" style="background: #1ae8c8"></span>Sistemas RH</div>
+            <div class="flow-block"><span class="flow-block-dot" style="background: #fbbf24"></span>Manutenção / GMAO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CODE / TERMINAL -->
+<section id="code">
+  <div class="section-inner">
+    <div class="code-layout">
+      <div class="fade-up">
+        <div class="section-eyebrow">Engenharia, não improviso</div>
+        <h2 class="section-title">Cada integração é <span class="gradient">código auditável</span>, testado e versionado.</h2>
+        <p class="section-sub" style="margin-bottom: 0;">Nada de macros frágeis ou planilhas exportadas no fim do mês. Cada pipeline é software real — com logs, retry, monitoramento e padrão de mercado.</p>
+
+        <ul class="code-list">
+          <li>
+            <span class="code-list-check">✓</span>
+            <div>
+              <strong>APIs REST, SOAP, OPC-UA e MQTT</strong>
+              <span>Conectores nativos para os principais protocolos corporativos e industriais.</span>
+            </div>
+          </li>
+          <li>
+            <span class="code-list-check">✓</span>
+            <div>
+              <strong>Logs estruturados e auditáveis</strong>
+              <span>Cada evento rastreável — da fonte ao destino. Conformidade e compliance integrados.</span>
+            </div>
+          </li>
+          <li>
+            <span class="code-list-check">✓</span>
+            <div>
+              <strong>Retry automático e resiliência</strong>
+              <span>Falhas tratadas com filas, dead-letter queues e fallback — integrações que não param.</span>
+            </div>
+          </li>
+          <li>
+            <span class="code-list-check">✓</span>
+            <div>
+              <strong>Implantação em cloud ou on-premise</strong>
+              <span>Você escolhe onde rodar. Segurança e isolamento garantidos em qualquer cenário.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="terminal fade-up">
+        <div class="term-head">
+          <div class="term-dots">
+            <div class="term-dot r"></div>
+            <div class="term-dot y"></div>
+            <div class="term-dot g"></div>
+          </div>
+          <div class="term-tabs">
+            <div class="term-tab active">acesso_hris.py</div>
+            <div class="term-tab">pipeline.yml</div>
+            <div class="term-tab">logs</div>
+          </div>
+          <div style="width: 50px"></div>
+        </div>
+        <div class="term-body" id="term-body"><div><span class="ln">1</span><span class="com"># Carregando integração…</span><span class="cursor"></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-inner">
+    <div class="section-eyebrow">Processo</div>
+    <h2 class="section-title">Do primeiro contato à <span class="gradient">operação integrada</span>.</h2>
+    <p class="section-sub">Um processo estruturado, com entregas claras em cada etapa — e foco sempre no impacto operacional, não na complexidade técnica.</p>
+
+    <div class="process-grid">
+      <div class="process-card fade-up">
+        <span class="process-num">01 — Diagnóstico</span>
+        <h3>Entendimento do ambiente</h3>
+        <p>Mapeamos sistemas atuais, fluxos de dados, dores operacionais e oportunidades concretas de integração.</p>
+      </div>
+      <div class="process-card fade-up">
+        <span class="process-num">02 — Arquitetura</span>
+        <h3>Desenho da solução</h3>
+        <p>Definição técnica das integrações, protocolos, fluxos de dados e métricas de sucesso alinhados ao negócio.</p>
+      </div>
+      <div class="process-card fade-up">
+        <span class="process-num">03 — Desenvolvimento</span>
+        <h3>Implementação técnica</h3>
+        <p>Conectores, pipelines e dashboards desenvolvidos com padrão de engenharia — versionados, testados e documentados.</p>
+      </div>
+      <div class="process-card fade-up">
+        <span class="process-num">04 — Validação</span>
+        <h3>Testes em ambiente real</h3>
+        <p>Testes integrados com sua equipe técnica, com validação de dados e ajustes finos antes da entrada em produção.</p>
+      </div>
+      <div class="process-card fade-up">
+        <span class="process-num">05 — Entrega</span>
+        <h3>Operação em produção</h3>
+        <p>Pipelines em produção 24/7, com monitoramento, alertas e relatórios prontos para uso pelas equipes.</p>
+      </div>
+      <div class="process-card fade-up">
+        <span class="process-num">06 — Evolução</span>
+        <h3>Suporte e expansão</h3>
+        <p>Acompanhamento contínuo, ajustes e expansão das integrações conforme novas necessidades surgem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-card fade-up">
+    <h2>Pronto para conectar <span class="gradient">tudo que sua operação precisa enxergar</span>?</h2>
+    <p>Solicite um diagnóstico gratuito. Nossa equipe técnica analisa o seu ambiente e apresenta um plano de integração sob medida — em até 24h.</p>
+    <div class="hero-btns">
+      <a href="#contato" class="btn btn-primary">
+        Solicitar diagnóstico
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#solucoes" class="btn btn-ghost">Ver soluções</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div class="contact-info fade-up">
+        <div class="section-eyebrow">Contato</div>
+        <h2>Vamos conversar sobre a sua operação.</h2>
+        <p>Conte para nós sobre os sistemas que você usa, os desafios atuais e os objetivos. Nossa equipe técnica retorna em até 24 horas úteis com uma análise inicial sem custo.</p>
+        <ul class="contact-perks">
+          <li>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Diagnóstico gratuito e sem compromisso
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Confidencialidade garantida (NDA disponível)
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Retorno em até 24 horas úteis
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Proposta técnica e comercial detalhada
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-form fade-up">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mail corporativo</label>
+              <input type="email" id="email" name="email" placeholder="voce@empresa.com.br" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 9 0000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sistema">Sistema que deseja integrar</label>
+            <select id="sistema" name="sistema">
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option>Controle de acesso / segurança</option>
+              <option>Automação predial / BMS</option>
+              <option>CRM</option>
+              <option>RH / sistema de ponto</option>
+              <option>Manutenção (GMAO)</option>
+              <option>ERP</option>
+              <option>BI / dashboard</option>
+              <option>Mais de um sistema</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="desafio">Qual o principal desafio hoje?</label>
+            <textarea id="desafio" name="desafio" placeholder="Descreva brevemente o problema que deseja resolver com integração ou automação..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar solicitação →</button>
+        </form>
+        <div class="form-success" id="form-success">
+          ✓ Solicitação enviada! Nossa equipe entrará em contato em até 24 horas.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="nav-logo-mark">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="akres-grad-2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00d4ff"/>
+              <stop offset="100%" stop-color="#1ae8c8"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 4.5 L5 27.5 M16 4.5 L27 27.5 M9.5 19 L22.5 19" stroke="url(#akres-grad-2)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="16" cy="4.5" r="3" fill="url(#akres-grad-2)"/>
+          <circle cx="5" cy="27.5" r="2.5" fill="#1ae8c8"/>
+          <circle cx="27" cy="27.5" r="2.5" fill="#1ae8c8"/>
+          <circle cx="9.5" cy="19" r="1.6" fill="#00d4ff"/>
+          <circle cx="22.5" cy="19" r="1.6" fill="#00d4ff"/>
+        </svg>
+      </span>
+      <span>Akres</span>
+    </div>
+    <p>© 2026 Akres — Integração de Sistemas Corporativos</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
